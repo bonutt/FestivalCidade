@@ -20,7 +20,10 @@ if (cupom.ToUpper() == "ROCK10")
 
 decimal valorFinal = custoBruto - desconto;
 
+bool loungeVip = dias > 2 && pontos >= 500;
+
 Console.WriteLine("Valor final: " + valorFinal);
 Console.WriteLine("Valor bruto: " + custoBruto);
+Console.WriteLine("Acesso ao Lounge VIP: " + loungeVip);
 
 Console.ReadLine();
