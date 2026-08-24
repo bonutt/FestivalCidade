@@ -1,4 +1,8 @@
-﻿Console.Write("Nome do fa: ");
+﻿using System.Globalization;
+
+CultureInfo br = new CultureInfo("pt-BR");
+
+Console.Write("Nome do fa: ");
 string nome = Console.ReadLine();
 
 Console.Write("Quantidade de dias de show: ");
@@ -22,8 +26,10 @@ decimal valorFinal = custoBruto - desconto;
 
 bool loungeVip = dias > 2 && pontos >= 500;
 
-Console.WriteLine("Valor final: " + valorFinal);
-Console.WriteLine("Valor bruto: " + custoBruto);
+Console.WriteLine();
+Console.WriteLine("Fa: " + nome.ToUpper());
+Console.WriteLine("Valor bruto: " + custoBruto.ToString("C", br));
+Console.WriteLine("Valor final: " + valorFinal.ToString("C", br));
 Console.WriteLine("Acesso ao Lounge VIP: " + loungeVip);
 
 Console.ReadLine();
